@@ -31,4 +31,5 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
         })->name('dashboard');
     Route::get('/courses',[CourseController::class,'index'])->name('courses.index');
     Route::get('/course/{id}',[CourseController::class,'show'])->name('courses.show');
+    Route::post('/togglewatched',[CourseController::class,'togglewatched'])->name('courses.togglewatched');
 });

@@ -29,6 +29,15 @@ class CourseController extends Controller
         //
     }
 
+
+    public function togglewatched(Request $request)
+    {
+        $video_id=$request->id;
+        $user=auth()->user()->id;
+        //$user->videos()->toggle($video_id);
+        return $user->videos();
+    }
+
     /**
      * Store a newly created resource in storage.
      *
